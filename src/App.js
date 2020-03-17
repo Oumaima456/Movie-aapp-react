@@ -2,6 +2,7 @@ import  React, { Component } from 'react';
 import './App.css';
 import Search from './componet/Search'
 import Films from "./componet/Films"
+import Starrating from './componet/Starrating';
 
 
 
@@ -47,7 +48,7 @@ class App extends Component {
 
  
 render(){
-this.state.filmlist.filter(el=>(el.film.toLowerCase().includes(this.state.search.toLowerCase())))
+  this.state.filmlist.filter(el=>(el.film.toLowerCase().includes(this.state.search.toLowerCase()))).filter(el=>el.rating>=this.state.rate)
 
   return (
     <div>
@@ -57,13 +58,13 @@ this.state.filmlist.filter(el=>(el.film.toLowerCase().includes(this.state.search
      <h1>Movies</h1>
      <div className="rating-filter">
         <span className="rating-filter-text">Minimum rating</span>
-        <span>★★★★☆</span>
+        <span><Starrating  count={filmlist.rating} starrate={this.state.rate} handlestar={this.handlestar}/></span>
       </div>
      </header>
      
     
-      <Search starrate={this.state.rate} handlesearch={this.handlesearch} handlestar={this.handlestar}/>
-      <Films count={this.rating} x={filmlist}/>
+      <Search  handlesearch={this.handlesearch}/>
+      <Films   x={filmlist}/>
       
       
     </div>
