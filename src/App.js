@@ -40,7 +40,7 @@ class App extends Component {
   state={
   search:"",
   rate:1,
-  filmlist,
+  filmlist:filmlist
 
   }
   handlesearch=(e)=>{this.setState({search:e.target.value})}
@@ -48,7 +48,7 @@ class App extends Component {
 
  
 render(){
-  this.state.filmlist.filter(el=>(el.film.toLowerCase().includes(this.state.search.toLowerCase()))).filter(el=>el.rating>=this.state.rate)
+
 
   return (
     <div>
@@ -58,13 +58,14 @@ render(){
      <h1>Movies</h1>
      <div className="rating-filter">
         <span className="rating-filter-text">Minimum rating</span>
-        <span><Starrating  count={filmlist.rating} starrate={this.state.rate} handlestar={this.handlestar}/></span>
+        <span><Starrating   starsrate={this.state.rate} handlestar={this.handlestar}/></span>
+     
       </div>
      </header>
      
     
-      <Search  handlesearch={this.handlesearch}/>
-      <Films   x={filmlist}/>
+      <Search  handlesearch={this.handlesearch} handlestar={this.handlestar}/>
+      <Films   x={  this.state.filmlist.filter(el=>(el.film.toLowerCase().includes(this.state.search.toLowerCase()))).filter(el=>el.rating>=this.state.rate)}/>
       
       
     </div>

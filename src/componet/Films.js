@@ -15,7 +15,7 @@ export default function filmlist({x}) {
                     <img className='img' src={el.image}/>
                     <h5>{el.film}</h5>
 
-                    <p><Starsrating count={el.rating} /></p>
+                    <p><Starsrating starsrate={el.rating} /></p>
                     </div>
                 )}
         </div>

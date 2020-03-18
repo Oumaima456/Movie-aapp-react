@@ -1,21 +1,22 @@
 import React from 'react'
 
-export default function starsrating({count , handlestar= ()=>{} } ){
-    let stars=[]
+export default function starsrating({starsrate , handlestar= ()=>{} } ){
+    
+    const count=(rate)=> { let stars=[]
     for ( let i=1;i<6;i++){
-        if(i<count)
+        if(i<rate)
         stars.push(<span className='golden'onClick={()=>handlestar(i)}>★</span>)
         else{
             stars.push(<span className='normal'onClick={()=>handlestar(i)}>☆</span>)
         }
-    }
-
+    } return stars
+}
 
 
 
     return (
         <div>
-           {stars} 
+           {count(starsrate)} 
         </div>
     )
 }
