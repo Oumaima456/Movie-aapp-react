@@ -1,9 +1,11 @@
 h1{
-  
+  position: absolute;
   box-sizing: border-box;
   color: white;
-  text-align: center;
-  
+  margin-top: -258px;
+  margin-left: 600px;
+
+
 }
 body{
   font-family: 'montserrat',sans-serif;
@@ -26,34 +28,109 @@ body{
   transition: 0.4s ease-out;
 }
 .searchbox{
-  box-shadow: 0px 0px 25px 3px  rgb(209, 195, 198);
+  box-shadow: 0px 0px 35px 10px  rgb(209, 195, 198);
+  position: absolute;
+  margin-top: -248px;
+
 }
 .hello{
   width: 100%;
+  position: relative;
+  height: 50%;
 }
-.films{
+.film{
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
  
 }
+.film :hover{
+  zoom: 1;
+}
 .img{
 
   width: 400px;
-  height: 331px;
+  height: 251px;
   display: flex;
+  flex-wrap: wrap;
   border-radius: 10px;
+
 }
 h5{
   color: #83191d;
   font-family:  URW Chancery L, cursive;
-  font-size: 28px;
+  font-size: 18px;
  
 }
 span{
-  color: rgb(255, 255, 255);
-  margin: 80px;
+  color: rgb(280, 280, 280);
+
 }
+p{
+  color: white;
+}
+.rating{
+  font-size: 25px;
+
+}
+.rating-filter{
+  margin-left: 550px;
+  font-size: 25px
+}
+.ligne{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+span{
+  cursor: pointer;
+
+}
+.Modal-cont{
+  margin: 15px ;
+  width: 400px;
+  height: 331px;
+  color: #83191d;
+}
+.Modal-img{
+width:5vw ;
+}
+.Modal-cont .Modal-img:hover{
+  width: 5.5vw;
+}
+.MN{
+  margin-top: 5%;
+}
+.Modal-content{
+height: 40vw;
+}
+.Modal-input{
+  height: 20vw;
+  padding: 0;
+  
+  
+}
+label.fname{
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-left: 18%;
+  width: 260px;
+  text-align: center ;
+  color: #2D3436  ;
+  
+}
+.input{
+  margin-left: 8%;
+  width: 25vw;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #D8DEDE;
+  font-size: 15px;
+}
+.title-input{
+  padding-right: 15px;
+}
+
 
 
