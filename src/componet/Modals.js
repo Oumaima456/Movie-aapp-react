@@ -24,25 +24,33 @@ render()
 
           <Modal.Body className="Modal-input" >
             
-            <form >
+            <form 
+             onSubmit={e => {
+              e.preventDefault();
+            
+              this.setState({ show: false,
+                newfilm:"",
+                newrate:"0",newimage:"", show:false} );
+
+
+            }}
+          >
               <label className="MN fname">Enter a movie name:</label>
               <input className="title-input input"  placeholder="Movie's Name" name='title' type='text' onChange={this.filmName}/>
               <label className="MI fname">Enter an image for your movie</label>-
               <input className="img-input input" placeholder="Your image's movie" name='image' type='text' onChange={this.filmImage}/>
               <label className="MR fname">Give a rate to your movie:</label>
               <input className="rating-input input" placeholder="Rate" name='rating' type='text'  onChange={this.filmRate}/>
-
+              <button className="bou" variant="primary" onClick={()=>this.props.addMovie(this.state.newimage,this.state.newfilm,this.state.newrate)}>Save Changes
+                  </button>
               
-              </form>
+              </form >
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleshow}>
+            <Button className="bou" variant="secondary" onClick={this.handleshow}>
               Close
             </Button>
-            <Button variant="primary" onClick={()=>this.props.addMovie(this.state.newimage,this.state.newfilm,this.state.newrate)}>
-
-              Save Changes
-            </Button>
+          
           </Modal.Footer>
         </Modal>
 

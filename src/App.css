@@ -37,15 +37,14 @@ body{
   width: 100%;
   position: relative;
   height: 50%;
+
 }
 .film{
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
-  justify-content: space-between;
- 
+margin: 10px;
 }
-
 .img{
 
   width: 400px;
@@ -53,6 +52,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   border-radius: 10px;
+  margin: 10px;
 
 }
 h5{
@@ -84,6 +84,7 @@ p{
 span{
   cursor: pointer;
 
+
 }
 .Modal-cont{
   margin: 15px ;
@@ -110,13 +111,7 @@ height: 40vw;
   
 }
 label.fname{
-  font-family: sans-serif;
-  font-size: 16px;
-  margin-left: 18%;
-  width: 260px;
-  text-align: center ;
-  color: #2D3436  ;
-  
+ 
 }
 .input{
   margin-left: 8%;
@@ -129,6 +124,19 @@ label.fname{
 .title-input{
   padding-right: 15px;
 }
+.ligne{
+  margin: 10px;
+}
+.bou{
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-left: 18%;
+  width: 260px;
+  text-align: center ;
+  color: #2D3436  ;
+  background-color: grey;
+  
 
+}
 
 
