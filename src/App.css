@@ -45,9 +45,7 @@ body{
   justify-content: space-between;
  
 }
-.film :hover{
-  zoom: 1;
-}
+
 .img{
 
   width: 400px;
